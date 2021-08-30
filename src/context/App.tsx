@@ -129,7 +129,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const validateToken = useCallback(
     async ({ token, hostname }: AuthTokenOptions) => {
       await apiRequestAuth(
-        `https://api.${hostname}/notifications`,
+        `https://${hostname}/api/v3/notifications`,
         'HEAD',
         token
       );
